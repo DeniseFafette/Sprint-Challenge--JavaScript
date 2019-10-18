@@ -93,7 +93,7 @@ class Dog extends Animal {
 }
  
 No more .bind(), .call(), .apply() and Object.create() etc.
-
+  
 
 ## Project Set up
 
