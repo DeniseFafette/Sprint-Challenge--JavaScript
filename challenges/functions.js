@@ -52,6 +52,7 @@ greeting('Mary', 'Poppins', (consume) => {
 
 // Explanation: 
 
+//nestedFunction can access internal because it is it downstream (nested inside).  It is inside and inner functions have access to the varibales in the outer function scope.
 
 const external = "I'm outside the function";
 
