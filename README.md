@@ -30,13 +30,70 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between .forEach and .map is that map returns a new array of elements while in turn passing each element back to the callback
+.map() calls a provided function on each element of the provided array and returns a new array of the same size or new size
+ 
+.forEach() doesn’t return anything, it simply calls the provided function on each element of the array.
+ 
+To   iterate the array and perform some operation on each element like saving it into the database then it will be better to go with .forEach()
+ 
+To transform the elements of the array then it will be good to choose .map() method. If you want to filter your data after modifying it then .map() is the good option because it creates a new array and we are free to perform any operation on that new array.
+
+
 2. What is the difference between a function and a method?
+
+Speaking strictly, a procedure is a subroutine that is executed purely for its side effects (like printing something to the screen) and returns no values. 
+A function is a subroutine that always returns the same value given the same inputs and has no side effects. 
+A method is a procedure or function that is associated with a class or object.  Methods are usually associated with object oriented programming.
+For convenience programming languages don't always make a distinction between functions, procedures, and methods. They have one or two ways to declare a subroutine. Whether it's a function, procedure, or method depends on how the programmer uses it.
+Function declarations are made up of several syntactical parts:
+The function keyword
+The name of the function
+An optional list of parameters
+The statements inside the block of code {}
+function add(a,b){ 
+ return a + b;
+}
+
 
 3. What is closure?
 
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function.
+The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
+In JavaScript, closures are the primary mechanism used to enable data privacy. When you use closures for data privacy, the enclosed variables are only in scope within the containing (outer) function. You can’t get at the data from an outside scope except through the object’s privileged methods.
+Objects are not the only way to produce data privacy. Closures can also be used to create stateful functions whose return values may be influenced by their internal state.
+
+
 4. Describe the four rules of the 'this' keyword.
 
+There are four rules to this discovery. And they all have to do with where an object is bound. Remember, JavaScript has a global object (or execution context) that exists wherever JavaScript lives. In the browser this is called window and in node it’s called global/console. Either way, JavaScript lives inside of a context. Go ahead and try this out in your Chrome web browser.
+Window/Global Object Binding
+When in the global scope, the value of “this” is in the window/console Object;
+ 
+Implicit Binding
+Whenever a function is called by a preceding dot, the object before that dot is this.
+New binding
+Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+Principle 4: Explicit binding
+Whenever JavaScript’s call or apply method is used, this is explicitly defined.
+
+
 5. Why do we need super() in an extended class?
+
+The extends keyword, and super(); function make it so trivial to bind our classes together to achieve some simple object inheritance. The extends keyword will abstract away any of the Class.call syntax that we’re used to. super() is used to tell a parent’s constructor to be concerned with the child’s attributes vis versa and abstracts away the Object.create(this, Class) syntax
+To create a subclass from this Animal class it’s really simple
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  speak() {
+    console.log(this.name + ' barks.');
+  }
+}
+ 
+No more .bind(), .call(), .apply() and Object.create() etc.
+  
 
 ## Project Set up
 
