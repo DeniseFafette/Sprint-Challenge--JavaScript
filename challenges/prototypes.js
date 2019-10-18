@@ -7,7 +7,7 @@
 */
 
 // function CuboidMaker(dimensions){
-//   this.newlength = dimension.length,
+//   this.newlength = dimensions.length,
 //   this.newwidth = dimenions.width,
 //   this.newheight = dimensions.height
 // }
